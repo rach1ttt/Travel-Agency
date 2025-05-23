@@ -16,23 +16,71 @@
         color: #007E33;
         text-shadow: 5px 3px 20px #007E33;
     }
-   a:link{
-    color:#1C1C1C;
+   a.link:link{
+    color:#1c1c1c;
+    padding: 20px 210px;
+    border-radius: 5px;
    }
-   a:hover{
-    color:#ffffff;
+   a.link:hover{
+    color:#2b3295;
+    background-color: rgba(255, 255, 255, 0.2);
    }
-   a:active{
-    color: red;
-   }
-   a.book:link{
-    color: blue;
-   }
-   a.book:hover{
+   a.link:active{
     color: red;
    }
     div#table{
         background: -webkit-linear-gradient(#F0F0C9,#7AC6D2,#7AC6D2,#7AC6D2,#7AC6D2,#7AC6D2,#7AC6D2,#F0F0C9);
+    }
+   
+   #maintable {
+    animation-name: FadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    }
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+    #downtable{
+        animation-name: FadeIn4;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+}
+
+    @keyframes FadeIn4 {
+        0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+    }
+     .button{
+        display: inline-block;
+        background-color: rgba(255, 162, 0,0.8) ;
+        padding: 10px 15px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px black;
+        transition: 0.3s ease-in, transform 0.3s ease;
+        
+        text-decoration: none;
+    }
+    .button:hover{
+        background-color: rgb(255, 162, 0);
+        
+        transform: translateY(-2px);
+    }
+    .button:active{
+        transform: scale(0.96);
     }
    
     </style>
@@ -41,7 +89,7 @@
     <table border="0" height="100%" width="100%" bgcolor="F0F0C9">
         <tr>
             <td align="center" width="35%">
-                <a href="index.html"><img src="Remove Background Image.png"  alt="Logo" width="50%" height="50%"></a>
+                <a href="index.html"><img src="images/Remove Background Image.png"  alt="Logo" width="50%" height="50%"></a>
             </td>
             <td align="center" colspan="2" >
                 <h1 align="center" style="text-shadow: 5px 5px 10px #807b7b;">Welcome to Ghumo Duniya Agency</h1>
@@ -53,15 +101,20 @@
         </tr>
 
     </table>
+   
+
     <table width="100%" border="0" bgcolor="F2BB05">
-        <tr>
-            <td align="center"> <h3><a href="index.html">Home</a></h3></td>
-            <td align="center"> <h3><a href="about.html">About</a></h3></td>
-            <td align="center"> <h3><a href="contact.html">Contact</a></h3></td>
-        </tr>
+         <tr>
+            <td align="center"> <h3><a class="link" href="index.html">Home</a></h3></td>
+            <td align="center"> <h3><a class="link" href="about.html">About</a></h3></td>
+            <td align="center"> <h3><a class="link" href="contact.html">Contact</a></h3></td>
+         </tr>
     </table>
+  
     <blockquote></blockquote>
-    <div id="table"><table >
+    <div id="table">
+        <div id="maintable">
+        <table >
         <tr>
             <td><blockquote></blockquote></td>
         </tr>
@@ -93,8 +146,10 @@
         </tr>
     </table>
     </div>
-   
-    <h2 align="center"> <a href="Form.html">Book Your Trip Now</a></h2>
+    </div>
+   <div id="downtable">
+    <h2 align="center"> <a class="button" href="Form.html">Book Your Trip Now</a></h2>
+    
     <table width="100%" bgcolor="F2BB05">
         <tr>
             <th align="center">&copy;GhumoDuniyaAgency2025</th>
@@ -102,5 +157,6 @@
     
        
     </table>
+    </div>
 </body>
 </html>
