@@ -13,6 +13,76 @@
         color: #3B3B3B;
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
+    h3{
+        color: #000;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 20px;
+      margin: 0 auto;
+      row-gap: 20px;
+    }
+    .item {
+      text-align: center;
+      padding: 50px;
+      width: 70%;
+      box-sizing: border-box;
+    }
+    .item h2, .item h3{
+        margin: 5px;
+    }
+    .item h2{
+        margin-top: 15px;
+    }
+    .flip-box {
+      perspective: 1000px;
+      height: 280PX;
+      width: 100%;
+    }
+    ul{
+        list-style: none;
+        color: #1C1C1C;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: large;
+    }
+    .img {
+      border-radius: 15px;
+    }
+    
+    .flip-box-inner {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px ;
+    border: 1px solid;
+    border-radius: 15px;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-box:hover .flip-box-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-box-front, .flip-box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .flip-box-front {
+      color: black;
+    }
+    .flip-box-back {
+      background-color: transparent;
+      color: white;
+      transform: rotateY(180deg);
+      padding: 10px;
+      box-sizing: border-box;
+    }
     
    #maintable {
     animation-name: FadeIn;
@@ -64,7 +134,12 @@
         transform: scale(0.96);
     }
 
-   
+   .bg{
+        background-color: rgba(255,255,255,0.3);
+        width: 95%;
+        padding: 5px 5px;
+        border-radius: 25px;
+   }
    
    a.link:link{
     color:#1c1c1c;
@@ -91,7 +166,7 @@
         box-shadow: 1px 10px 15px #3B3B3B;
     }
     #myshadow{
-        text-shadow: 7px 2px 10px #15be59;
+        text-shadow: 7px 2px 7px #1cda22;
         
     }
     
@@ -122,76 +197,115 @@
             <td align="center"> <h3><a class="link" href="contact.html">Contact</a></h3></td>
         </tr>
     </table>
-    <hr width="30%">
+    
     <div id="table">
     <div id="maintable">
     <h2 align="center" style="text-shadow: 2px 2px 10px #4e4a4a;">Our Top Destination</h2>
     </div>
+    
     <div id="maintable">
-    <table width="100%" border="0" cellpadding="4">
-        <tr>
-            <td width="35%" align="center"> <h2 style="text-shadow: 2px 2px 10px #4e4a4a;">Destination </h2></td>
-            <td align="center"> <h2 style="text-shadow: 2px 2px 10px #4e4a4a;">Duration </h2></td>
-            <td align="center"> <h2 style="text-shadow: 2px 2px 10px #4e4a4a;">Price</h2></td>
-        </tr>
-        <tr>
-           <td align="center"> 
-                <img id="myimg" src="images/GOA.png" alt="Goa" width="90%"> 
-                <h3 style="text-shadow: 2px 2px 10px #4e4a4a;" align="center">Goa</h3>
-            </td>
-            <td>
-                 <h3 align="center">5Days/6Nights</h3>
-                 <h4 align="center"><em> Things included: </em></h4>
-                    <li align="center">
-                        <ul>3-star/4-star beachside hotels</ul>
-                        <ul>Daily breakfast</ul>
-                        <ul>Sightseeing cab or shared bus</ul>
-                        <ul>Dolphin spotting cruise (optional)</ul>
-                        <ul>Scuba diving / Jet skiing (optional extra)</ul>
-                    </li>
-                
-            </td>
-            <td> <h3 id="myshadow" align="center">&#x20B9;17,999  </h3></td>
-        </tr>
-        <tr>
-            <td align="center">
-               <img id="myimg" src="images/Manali.png" alt="Manali" width="90%"></div> 
-                <h3 style="text-shadow: 2px 2px 10px #4e4a4a;">Manali</h3>
-            </td>
-            <td> 
-                <h3 align="center">4Days/5Nights</h3> 
-                <h4 align="center"><em>Things included</em></h4>
-                <li align="center">
-                    <ul>Mountain-view hotel with heater</ul>
-                    <ul>Daily breakfast and dinner</ul>
-                    <ul>Vehicle for sightseeing</ul>
-                    <ul>Rohtang Pass permit assistance</ul>
-                    <ul>Bonfire night</ul>
-                </li>
-            </td>
-            <td> <h3 id="myshadow" align="center">&#x20B9;12,999 </h3> </td>
-        </tr>
-        <tr>
-            <td align="center">
-               <img id="myimg" src="images/Kerala.png" alt="Kerala" width="90%"></div> 
-                <h3 style="text-shadow: 2px 2px 10px #4e4a4a;">Kerala</h3>
-            </td>
-            <td>
-                 <h3 align="center"> 3Days/4Nights</h3>
-                 <h4 align="center"><em>Things included</em></h4>
-                 <li align="center">
-                    <ul>Hotel + Houseboat stay</ul>
-                    <ul>Traditional Kerala meals</ul>
-                    <ul>Cab for private transfers</ul>
-                    <ul>Elephant ride (optional)</ul>
-                    <ul>Tea plantation tour</ul>
-                </li>
-            </td>
-            <td> <h3 id="myshadow" align="center"> &#x20B9;8,999 </h3></td>
-        </tr>
-    </table>
+    <center>
+    <div class="bg">
+   <div class="container">
+    <div class="item">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img class="img" src="images/GOA.png" alt="Goa" width="100%" height="100%">
+          </div>
+          <div class="flip-box-back">
+            <h2>5Days/6Nights</h2>
+            <h3>Things included</h3>
+            <ul>
+              <li>4 star beachside hotel</li>
+              <li>Daily breakfast</li>
+              <li>Cab for sightseeing</li>
+              <li>Dolphin spotting cruise</li>
+              <li>Scuba diving</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h2>Goa</h2>
+      <h3 id="myshadow">&#x20b9;17,999</h3>
+    </div>
+
+    <div class="item">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img class="img" src="images/Manali.png" alt="Manali" width="100%" height="100%">
+          </div>
+          <div class="flip-box-back">
+            <h2>5Days/6Nights</h2>
+            <h3>Things included</h3>
+            <ul>
+              <li>4 star hotel</li>
+              <li>Daily breakfast</li>
+              <li>Cab for sightseeing</li>
+              <li>Snow activities</li>
+              <li>Bonfire night</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h2>Manali</h2>
+      <h3 id="myshadow">&#x20b9;12,999</h3>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="item">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img class="img" src="images/Kerala.png" alt="Kerala" width="100%" height="100%">
+          </div>
+          <div class="flip-box-back">
+            <h2>5Days/6Nights</h2>
+            <h3>Things included</h3>
+            <ul>
+              <li>4 star hotel</li>
+              <li>Daily breakfast</li>
+              <li>Cab for sightseeing</li>
+              <li>Backwater cruise</li>
+              <li>Ayurvedic massage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h2>Kerala</h2>
+      <h3 id="myshadow">&#x20b9;9,999</h3>
+    </div>
+
+    <div class="item">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img class="img" src="images/Udaipur.png" alt="Udaipur" width="100%" height="100%">
+          </div>
+          <div class="flip-box-back">
+            <h2>5Days/6Nights</h2>
+            <h3>Things included</h3>
+            <ul>
+              <li>4 star hotel</li>
+              <li>Daily breakfast</li>
+              <li>Cab for sightseeing</li>
+              <li>Lake Pichola boat ride</li>
+              <li>Palace visit</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h2>Udaipur</h2>
+      <h3 id="myshadow">&#x20b9;7,999</h3>
+    </div>
+  </div>
     </div>
     </div>
+    </center>
+    </div>
+    
     <div id="downtable">
     <h2 align="center"> <a class="button" href="Form.html" >Book Your Trip Now</a></h2>
     <table width="100%" bgcolor="F2BB05">
